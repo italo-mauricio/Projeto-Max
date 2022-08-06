@@ -32,455 +32,464 @@ def utili():
                 if user == '1':
                     lapyear()
                 elif user == '2':
-                    print("""Welcome to the average calculator to BSI!
-                    Below are the articles from this period!
-
-                    ====== Introduction to Informatics [1]
-                    ====== General Theory of Administration [2]
-                    ====== Logic [3]
-                    ====== Fundamentals of Mathematics [4]
-                    ====== Algorithms and Programming Logic [5]
-                    """)
-                    student = input('Choose an option: ')
-                    
-                    if student == '1':
-                        while True:
-                            print("""Welcome to Introduction to Informatics!
-                            This is your average calculator for your first period of INTF!
-                            Given by: Prof Luiz Paulo
-                            Le'ts calculate your average this semester...""")
-                            print('=+'*40)
-                            print("""
-                            ========== Unity: 1 =================
-                            ========== Unity: 2 =================
-                            ========== Unity: 3 =================
-                            ========== Final Result: 4 =========
-                            ========== Exit Menu: 5 =============
-                            """)
-                            print('+='*40)
-                            print('Loading...')
-                            sleep(1)
-                            i = 0
-                            average = 0
+                    calculator()
 
 
-                            student = input('Which unity do you want to access: ')
+
+
+
+def calculator():
+    print("""Welcome to the average calculator to BSI!
+    Below are the articles from this period!
+
+    ====== Introduction to Informatics [1]
+    ====== General Theory of Administration [2]
+    ====== Logic [3]
+    ====== Fundamentals of Mathematics [4]
+    ====== Algorithms and Programming Logic [5]
+    """)
+    student = input('Choose an option: ')
+    
+    if student == '1':
+        while True:
+            print("""Welcome to Introduction to Informatics!
+            This is your average calculator for your first period of INTF!
+            Given by: Prof Luiz Paulo
+            Le'ts calculate your average this semester...""")
+            print('=+'*40)
+            print("""
+            ========== Unity: 1 =================
+            ========== Unity: 2 =================
+            ========== Unity: 3 =================
+            ========== Final Result: 4 =========
+            ========== Exit Menu: 5 =============
+            """)
+            print('+='*40)
+            print('Loading...')
+            sleep(1)
+            i = 0
+            average = 0
+
+
+            student = input('Which unity do you want to access: ')
+        
+            if student == '1':
+                
+                    print('You chose to chek the first unit grades')
+                    print('To be approved you need an average of 5')
+                    print('In this unit there will be 2 avalutations')
+                    note1 = float(input('Type your first note: '))
+                    note2 = float(input('Type your second note: '))
+                    average1 = (note1 + note2 ) / 2
+                    print('His average was {:.2f}'.format(average1))
+                    if average1 >= 5:
+                        print('Congratulations you PASSED with average {:.2f}!!!'.format(average1))
+                    else:
+                        print('Unfortunately you failed with average {:.2f}'.format(average1))
+                    average += average1
+
                         
-                            if student == '1':
-                                
-                                    print('You chose to chek the first unit grades')
-                                    print('To be approved you need an average of 5')
-                                    print('In this unit there will be 2 avalutations')
-                                    note1 = float(input('Type your first note: '))
-                                    note2 = float(input('Type your second note: '))
-                                    average1 = (note1 + note2 ) / 2
-                                    print('His average was {:.2f}'.format(average1))
-                                    if average1 >= 5:
-                                        print('Congratulations you PASSED with average {:.2f}!!!'.format(average1))
-                                    else:
-                                        print('Unfortunately you failed with average {:.2f}'.format(average1))
-                                    average += average1
 
-                                        
-
-                            elif student == '2':
-                                    
-                                    print('You chose to chek the second unit grades')
-                                    print('To be approved you need an average of 5')
-                                    print('In this unit there will be 3 avalutations')
-                                    note1 = float(input('Type your first note: '))
-                                    note2 = float(input('Type your second note: '))
-                                    note3 = float(input('Type your third note: '))
-                                    average2 = (note1 + note2 + note3 )/ 3
-                                    print('His average was {:.2f}'.format(average2))
-                                    if average2 >= 5:
-                                        print('Congratulations you PASSED with average {:.2f}!!!'.format(average2))
-                                    else:
-                                        print('Unfortunately you failed with average {:.2f}'.format(average2))
-                                    average += average2
-                                    
-                                    
-                            elif student == '3':
-                                    
-                                    print('You chose to chek the third unit grades')
-                                    print('To be approved you need an average of 5')
-                                    print('In this unit there will be 4 avalutations')
-                                    note1 = float(input('Type your first note: '))
-                                    note2 = float(input('Type your second note: '))
-                                    note3 = float(input('Type your third note: '))
-                                    note4 = float(input('Type your four note: '))
-                                    average3 = (note1 + note2 + note3 + note4)/4
-                                    print('His average was {:.2f}'.format(average3))
-                                    if average3 >= 5:
-                                        print('Congratulations you PASSED with average {:.2f}!!!'.format(average3))
-                                    else:
-                                        print('Unfortunately you failed with average {:.2f}'.format(average3))
-                                    average += average3
-                                    
-                                   
-                            elif student == '4':
-                                    if average / 3 >= 5:
-                                        print('Approved by Average!!! {:.2f}'.format(average/3))
-                                    else:
-                                        print("Failed but don't drop out of the course")
-                                 
-                            elif student == '5':
-                                    print("Thank you, have a great day!")
-                                    break
-
-                            else:
-                                    print('Invalid option, try again!')
-                                    
-                                    
-                          
-                    if student == '2':
-                        while True:
-                            print("""Welcome to General Theory of Administration!
-                            This is your average calculator for your first period of TGA!
-                            Given by: Prof. Dra Adrianne Souza
-                            Le'ts calculate your average this semester...""")
-                            print('=+'*40)
-                            print("""
-                            ========== Unity: 1 =================
-                            ========== Unity: 2 =================
-                            ========== Unity: 3 =================
-                            ========== Final Result: 4 =========
-                            ========== Exit Menu: 5 ============
-                            ========== Return to Main Menu: 0 ===
-                            """)
-                            print('+='*40)
-                            print('Loading...')
-                            sleep(1)
+            elif student == '2':
                     
-                            aluno = input('Qual unidade você deseja acessar: ')
-                           
-                            if aluno == '1':
-                                
-                                    print('Você escolheu verificar as notas da primeira unidade')
-                                    print('Para ser aprovador você precisa de média 5')
-                                    print('Nesta unidade serão 3 avaliações')
-                                    nota1 = float(input('Digite sua primeira nota: '))
-                                    nota2 = float(input('Digite sua segunda nota: '))
-                                    nota3 = float(input('Digite sua terceira nota: '))
-                                    media1 = (nota1 + nota2 + nota3) / 3
-                                    print('Sua média foi de {:.2f}'.format(media1))
-                                    if media1 >= 5:
-                                        print('Parabéns você foi aprovado com média {:.2f}'.format(media1))
-                                    else:
-                                        print('Infelizmente você foi reprovado com média {:.2f}'.format(media1))
-                                    médias += media1
-                                    
-                                
-                            elif aluno == '2':
-                                    
-                                    print('Você escolheu verificar as notas da segunda unidade')
-                                    print('Para ser aprovado você precisa de média 5')
-                                    print('Nesta unidade serão 5 avaliações')
-                                    nota1 = float(input('Digite sua primeira nota: '))
-                                    nota2 = float(input('Digite sua segunda nota: '))
-                                    nota3 = float(input('Digite sua terceira nota: '))
-                                    media2 = (nota1 + nota2 + nota3 )/ 3
-                                    print('Sua média foi de {:.2f}'.format(media2))
-                                    if media2 >= 5:
-                                        print('Parabéns, você foi aprovado com média {:.2f}'.format(media2))
-                                    else:
-                                        print('Infelizmente você foi reprovado com média {:.2f}'.format(media2))
-                                    médias += media2
-                                  
-                            elif aluno == '3':
-                                    
-                                    print('Você escolheu verificar as notas da terceira unidade')
-                                    print('Para ser aprovado você precisa de média 5')
-                                    print('Nesta unidade serão 4 avaliações')
-                                    nota1 = float(input('Digite sua primeira nota: '))
-                                    nota2 = float(input('Digite sua segunda nota: '))
-                                    nota3 = float(input('Digite sua terceira nota: '))
-                                    nota4 = float(input('Digite sua quarta nota: '))
-                                    media3 = (nota1 + nota2 + nota3 + nota4)/4
-                                    print('Sua média foi de {:.2f}'.format(media3))
-                                    if media3 >= 5:
-                                        print('Parabéns você foi aprovado com média {:.2f}'.format(media3))
-                                    else:
-                                        print('Infelizmente você foi reprovado com média {:.2f}'.format(media3))
-                                    médias+= media3
-                                    
-                                    
-                            elif aluno == '4':
-                                    if médias / 3 >= 5:
-                                        print('Aprovado com média {:.2f}'.format(médias/3))
-                                    else:
-                                        print('reprovado')
-                                    
-                            elif aluno == '5':
-                                    print("Obrigado, tenha um bom dia!")
-                                    break
+                    print('You chose to chek the second unit grades')
+                    print('To be approved you need an average of 5')
+                    print('In this unit there will be 3 avalutations')
+                    note1 = float(input('Type your first note: '))
+                    note2 = float(input('Type your second note: '))
+                    note3 = float(input('Type your third note: '))
+                    average2 = (note1 + note2 + note3 )/ 3
+                    print('His average was {:.2f}'.format(average2))
+                    if average2 >= 5:
+                        print('Congratulations you PASSED with average {:.2f}!!!'.format(average2))
+                    else:
+                        print('Unfortunately you failed with average {:.2f}'.format(average2))
+                    average += average2
+                    
+                    
+            elif student == '3':
+                    
+                    print('You chose to chek the third unit grades')
+                    print('To be approved you need an average of 5')
+                    print('In this unit there will be 4 avalutations')
+                    note1 = float(input('Type your first note: '))
+                    note2 = float(input('Type your second note: '))
+                    note3 = float(input('Type your third note: '))
+                    note4 = float(input('Type your four note: '))
+                    average3 = (note1 + note2 + note3 + note4)/4
+                    print('His average was {:.2f}'.format(average3))
+                    if average3 >= 5:
+                        print('Congratulations you PASSED with average {:.2f}!!!'.format(average3))
+                    else:
+                        print('Unfortunately you failed with average {:.2f}'.format(average3))
+                    average += average3
+                    
+                    
+            elif student == '4':
+                    if average / 3 >= 5:
+                        print('Approved by Average!!! {:.2f}'.format(average/3))
+                    else:
+                        print("Failed but don't drop out of the course")
+                    
+            elif student == '5':
+                    print("Thank you, have a great day!")
+                    break
 
-                            else:
-                                print('Opção inválida!')
-                           
-                    if aluno == '3':
-                        while True:
-                            print("""Welcome to Logic!
-                            This is your average calculator for your first period of LGC!
-                            Given by: Prof Dr. João Paulo
-                            Le'ts calculate your average this semester...""")
-                            print('=+'*40)
-                            print("""
-                            ========== Unity: 1 =================
-                            ========== Unity: 2 =================
-                            ========== Unity: 3 =================
-                            ========== Final Result: 4 =========
-                            ========== Exit Menu: 5 ============
-                            ========== Return to Main Menu: 0 ===
-                            """)
-                            print('+='*40)
-                            print('Loading...')
-                            sleep(1)
-                         
-                            médias = 0
+            else:
+                    print('Invalid option, try again!')
+                    
+                    
+            
+    if student == '2':
+        while True:
+            print("""Welcome to General Theory of Administration!
+            This is your average calculator for your first period of TGA!
+            Given by: Prof. Dra Adrianne Souza
+            Le'ts calculate your average this semester...""")
+            print('=+'*40)
+            print("""
+            ========== Unity: 1 =================
+            ========== Unity: 2 =================
+            ========== Unity: 3 =================
+            ========== Final Result: 4 =========
+            ========== Exit Menu: 5 ============
+            ========== Return to Main Menu: 0 ===
+            """)
+            print('+='*40)
+            print('Loading...')
+            sleep(1)
+    
+            aluno = input('Qual unidade você deseja acessar: ')
+            
+            if aluno == '1':
+                
+                    print('Você escolheu verificar as notas da primeira unidade')
+                    print('Para ser aprovador você precisa de média 5')
+                    print('Nesta unidade serão 3 avaliações')
+                    nota1 = float(input('Digite sua primeira nota: '))
+                    nota2 = float(input('Digite sua segunda nota: '))
+                    nota3 = float(input('Digite sua terceira nota: '))
+                    media1 = (nota1 + nota2 + nota3) / 3
+                    print('Sua média foi de {:.2f}'.format(media1))
+                    if media1 >= 5:
+                        print('Parabéns você foi aprovado com média {:.2f}'.format(media1))
+                    else:
+                        print('Infelizmente você foi reprovado com média {:.2f}'.format(media1))
+                    médias += media1
+                    
+                
+            elif aluno == '2':
+                    
+                    print('Você escolheu verificar as notas da segunda unidade')
+                    print('Para ser aprovado você precisa de média 5')
+                    print('Nesta unidade serão 5 avaliações')
+                    nota1 = float(input('Digite sua primeira nota: '))
+                    nota2 = float(input('Digite sua segunda nota: '))
+                    nota3 = float(input('Digite sua terceira nota: '))
+                    media2 = (nota1 + nota2 + nota3 )/ 3
+                    print('Sua média foi de {:.2f}'.format(media2))
+                    if media2 >= 5:
+                        print('Parabéns, você foi aprovado com média {:.2f}'.format(media2))
+                    else:
+                        print('Infelizmente você foi reprovado com média {:.2f}'.format(media2))
+                    médias += media2
+                    
+            elif aluno == '3':
+                    
+                    print('Você escolheu verificar as notas da terceira unidade')
+                    print('Para ser aprovado você precisa de média 5')
+                    print('Nesta unidade serão 4 avaliações')
+                    nota1 = float(input('Digite sua primeira nota: '))
+                    nota2 = float(input('Digite sua segunda nota: '))
+                    nota3 = float(input('Digite sua terceira nota: '))
+                    nota4 = float(input('Digite sua quarta nota: '))
+                    media3 = (nota1 + nota2 + nota3 + nota4)/4
+                    print('Sua média foi de {:.2f}'.format(media3))
+                    if media3 >= 5:
+                        print('Parabéns você foi aprovado com média {:.2f}'.format(media3))
+                    else:
+                        print('Infelizmente você foi reprovado com média {:.2f}'.format(media3))
+                    médias+= media3
+                    
+                    
+            elif aluno == '4':
+                    if médias / 3 >= 5:
+                        print('Aprovado com média {:.2f}'.format(médias/3))
+                    else:
+                        print('reprovado')
+                    
+            elif aluno == '5':
+                    print("Obrigado, tenha um bom dia!")
+                    break
 
-
-                            aluno = input('Qual unidade você deseja acessar: ')
-                            if aluno == '1':
-                                
-                                print('Você escolheu verificar as notas da primeira unidade')
-                                print('Para ser aprovador você precisa de média 5')
-                                print('Nesta unidade serão 3 avaliações')
-                                nota1 = float(input('Digite sua primeira nota: '))
-                                nota2 = float(input('Digite sua segunda nota: '))
-                                nota3 = float(input('Digite sua terceira nota: '))
-                                media1 = (nota1 + nota2 + nota3) / 3
-                                print('Sua média foi de {:.2f}'.format(media1))
-                                if media1 >= 5:
-                                    print('Parabéns você foi aprovado com média {:.2f}'.format(media1))
-                                else:
-                                    print('Infelizmente você foi reprovado com média {:.2f}'.format(media1))
-                                médias += media1
-                            
-                            elif aluno == '2':
-                                    
-                                    print('Você escolheu verificar as notas da segunda unidade')
-                                    print('Para ser aprovado você precisa de média 5')
-                                    print('Nesta unidade serão 5 avaliações')
-                                    nota1 = float(input('Digite sua primeira nota: '))
-                                    nota2 = float(input('Digite sua segunda nota: '))
-                                    nota3 = float(input('Digite sua terceira nota: '))
-                                    media2 = (nota1 + nota2 + nota3 )/ 3
-                                    print('Sua média foi de {:.2f}'.format(media2))
-                                    if media2 >= 5:
-                                        print('Parabéns, você foi aprovado com média {:.2f}'.format(media2))
-                                    else:
-                                        print('Infelizmente você foi reprovado com média {:.2f}'.format(media2))
-                                    médias += media2
-                                    
-                                   
-                            elif aluno == '3':
-                                while True:    
-                                    print('Você escolheu verificar as notas da terceira unidade')
-                                    print('Para ser aprovado você precisa de média 5')
-                                    print('Nesta unidade serão 4 avaliações')
-                                    nota1 = float(input('Digite sua primeira nota: '))
-                                    nota2 = float(input('Digite sua segunda nota: '))
-                                    nota3 = float(input('Digite sua terceira nota: '))
-                                    nota4 = float(input('Digite sua quarta nota: '))
-                                    media3 = (nota1 + nota2 + nota3 + nota4)/4
-                                    print('Sua média foi de {:.2f}'.format(media3))
-                                    if media3 >= 5:
-                                        print('Parabéns você foi aprovado com média {:.2f}'.format(media3))
-                                    else:
-                                        print('Infelizmente você foi reprovado com média {:.2f}'.format(media3))
-                                    médias+= media3
-                                    
-                            elif aluno == '4':
-                                if médias / 3 >= 5:
-                                    print('Aprovado com média {:.2f}'.format(médias/3))
-                                else:
-                                    print('reprovado')
-                                        
-                            elif aluno == '5':
-                                print("Obrigado, tenha um bom dia!")
-                                break
-
-                            else:
-                                print("Option invalid!")
-
-                    if aluno == '4':
-                            print("""Welcome to Fundamentals of Mathematics!
-                            This is your average calculator for your first period of FM!
-                            Given by: Prof Dr. Marcio Barboza
-                            Le'ts calculate your average this semester...""")
-                            print('=+'*40)
-                            print("""
-                            ========== Unity: 1 =================
-                            ========== Unity: 2 =================
-                            ========== Unity: 3 =================
-                            ========== Final Result: 4 =========
-                            ========== Exit Menu: 5 ============
-                            ========== Return to Main Menu: 0 ===
-                            """)
-                            print('+='*40)
-                            print('Loading...')
-                            sleep(1)
-                            i = 0
-                            médias = 0
+            else:
+                print('Opção inválida!')
+            
+    if aluno == '3':
+        while True:
+            print("""Welcome to Logic!
+            This is your average calculator for your first period of LGC!
+            Given by: Prof Dr. João Paulo
+            Le'ts calculate your average this semester...""")
+            print('=+'*40)
+            print("""
+            ========== Unity: 1 =================
+            ========== Unity: 2 =================
+            ========== Unity: 3 =================
+            ========== Final Result: 4 =========
+            ========== Exit Menu: 5 ============
+            ========== Return to Main Menu: 0 ===
+            """)
+            print('+='*40)
+            print('Loading...')
+            sleep(1)
+            
+            médias = 0
 
 
-                            aluno = input('Qual unidade você deseja acessar: ')
-                       
-                                
-                            if aluno == '1':
-                                
-                                    print('Você escolheu verificar as notas da primeira unidade')
-                                    print('Para ser aprovador você precisa de média 5')
-                                    print('Nesta unidade serão 3 avaliações')
-                                    nota1 = float(input('Digite sua primeira nota: '))
-                                    nota2 = float(input('Digite sua segunda nota: '))
-                                    nota3 = float(input('Digite sua terceira nota: '))
-                                    nota4 = float(input('Digite sua quarta nota: '))
-                                    media1 = (nota1 + nota2 + nota3 + nota4) / 4
-                                    print('Sua média foi de {:.2f}'.format(media1))
-                                    if media1 >= 5:
-                                        print('Parabéns você foi aprovado com média {:.2f}'.format(media1))
-                                    else:
-                                        print('Infelizmente você foi reprovado com média {:.2f}'.format(media1))
-                                    médias += media1
-                                    
-                                
+            aluno = input('Qual unidade você deseja acessar: ')
+            if aluno == '1':
+                
+                print('Você escolheu verificar as notas da primeira unidade')
+                print('Para ser aprovador você precisa de média 5')
+                print('Nesta unidade serão 3 avaliações')
+                nota1 = float(input('Digite sua primeira nota: '))
+                nota2 = float(input('Digite sua segunda nota: '))
+                nota3 = float(input('Digite sua terceira nota: '))
+                media1 = (nota1 + nota2 + nota3) / 3
+                print('Sua média foi de {:.2f}'.format(media1))
+                if media1 >= 5:
+                    print('Parabéns você foi aprovado com média {:.2f}'.format(media1))
+                else:
+                    print('Infelizmente você foi reprovado com média {:.2f}'.format(media1))
+                médias += media1
+            
+            elif aluno == '2':
+                    
+                    print('Você escolheu verificar as notas da segunda unidade')
+                    print('Para ser aprovado você precisa de média 5')
+                    print('Nesta unidade serão 5 avaliações')
+                    nota1 = float(input('Digite sua primeira nota: '))
+                    nota2 = float(input('Digite sua segunda nota: '))
+                    nota3 = float(input('Digite sua terceira nota: '))
+                    media2 = (nota1 + nota2 + nota3 )/ 3
+                    print('Sua média foi de {:.2f}'.format(media2))
+                    if media2 >= 5:
+                        print('Parabéns, você foi aprovado com média {:.2f}'.format(media2))
+                    else:
+                        print('Infelizmente você foi reprovado com média {:.2f}'.format(media2))
+                    médias += media2
+                    
+                    
+            elif aluno == '3':
+                while True:    
+                    print('Você escolheu verificar as notas da terceira unidade')
+                    print('Para ser aprovado você precisa de média 5')
+                    print('Nesta unidade serão 4 avaliações')
+                    nota1 = float(input('Digite sua primeira nota: '))
+                    nota2 = float(input('Digite sua segunda nota: '))
+                    nota3 = float(input('Digite sua terceira nota: '))
+                    nota4 = float(input('Digite sua quarta nota: '))
+                    media3 = (nota1 + nota2 + nota3 + nota4)/4
+                    print('Sua média foi de {:.2f}'.format(media3))
+                    if media3 >= 5:
+                        print('Parabéns você foi aprovado com média {:.2f}'.format(media3))
+                    else:
+                        print('Infelizmente você foi reprovado com média {:.2f}'.format(media3))
+                    médias+= media3
+                    
+            elif aluno == '4':
+                if médias / 3 >= 5:
+                    print('Aprovado com média {:.2f}'.format(médias/3))
+                else:
+                    print('reprovado')
+                        
+            elif aluno == '5':
+                print("Obrigado, tenha um bom dia!")
+                break
 
-                            elif aluno == '2':
-                                
-                                    print('Você escolheu verificar as notas da segunda unidade')
-                                    print('Para ser aprovado você precisa de média 5')
-                                    print('Nesta unidade serão 5 avaliações')
-                                    nota1 = float(input('Digite sua primeira nota: '))
-                                    nota2 = float(input('Digite sua segunda nota: '))
-                                    media2 = (nota1 + nota2  )/ 2
-                                    print('Sua média foi de {:.2f}'.format(media2))
-                                    if media2 >= 5:
-                                        print('Parabéns, você foi aprovado com média {:.2f}'.format(media2))
-                                    else:
-                                        print('Infelizmente você foi reprovado com média {:.2f}'.format(media2))
-                                    médias += media2
-                                    
-                            elif aluno == '3':
-                                    
-                                    print('Você escolheu verificar as notas da terceira unidade')
-                                    print('Para ser aprovado você precisa de média 5')
-                                    print('Nesta unidade serão 4 avaliações')
-                                    nota1 = float(input('Digite sua primeira nota: '))
-                                    nota2 = float(input('Digite sua segunda nota: '))
-                                    media3 = (nota1 + nota2 )/ 2
-                                    print('Sua média foi de {:.2f}'.format(media3))
-                                    if media3 >= 5:
-                                        print('Parabéns você foi aprovado com média {:.2f}'.format(media3))
-                                    else:
-                                        print('Infelizmente você foi reprovado com média {:.2f}'.format(media3))
-                                    médias+= media3
-                                    
-                                   
-                            elif aluno == '4':
-                                    if médias / 3 >= 5:
-                                        print('Aprovado com média {:.2f}'.format(médias/3))
-                                    else:
-                                        print('reprovado')
-                                    
-                            elif aluno == '5':
-                                    print("Obrigado, tenha um bom dia!")
-                                    break
+            else:
+                print("Option invalid!")
 
-                            else:
-                                print("Option Invalid!")
-                            
-                    if aluno == '5':
-                            print("""Welcome to Algorithms and Programming Logic!
-                            This is your average calculator for your first period of ALP!
-                            Given by: Prof Dr. Flavius Gorgônio
-                            Le'ts calculate your average this semester...""")
-                            print('=+'*40)
-                            print("""
-                            ========== Unity: 1 =================
-                            ========== Unity: 2 =================
-                            ========== Unity: 3 =================
-                            ========== Final Result: 4 =========
-                            ========== Exit Menu: 5 ============
-                            ========== Return to Main Menu: 0 ===
-                            """)
-                            print('+='*40)
-                            print('Loading...')
-                            sleep(1)
-                            i = 0
-                            médias = 0
+    if aluno == '4':
+        while True:
+            print("""Welcome to Fundamentals of Mathematics!
+            This is your average calculator for your first period of FM!
+            Given by: Prof Dr. Marcio Barboza
+            Le'ts calculate your average this semester...""")
+            print('=+'*40)
+            print("""
+            ========== Unity: 1 =================
+            ========== Unity: 2 =================
+            ========== Unity: 3 =================
+            ========== Final Result: 4 =========
+            ========== Exit Menu: 5 ============
+            ========== Return to Main Menu: 0 ===
+            """)
+            print('+='*40)
+            print('Loading...')
+            sleep(1)
+            i = 0
+            médias = 0
 
 
-                            aluno = input('Qual unidade você deseja acessar: ')
-                           
-                            if aluno == '1':
-                                
-                                print('Você escolheu verificar as notas da primeira unidade')
-                                print('Para ser aprovador você precisa de média 5')
-                                print('Nesta unidade serão 3 avaliações')
-                                nota1 = float(input('Digite sua primeira nota: '))
-                                nota2 = float(input('Digite sua segunda nota: '))
-                                nota3 = float(input('Digite sua terceira nota: '))
-                                nota4 = float(input('Digite sua quarta nota: '))
-                                nota5 = float(input('Digite sua quinta nota: '))
-                                media1 = (nota1 + nota2 + nota3 + nota4 + nota5) / 5
-                                print('Sua média foi de {:.2f}'.format(media1))
-                                if media1 >= 5:
-                                    print('Parabéns você foi aprovado com média {:.2f}'.format(media1))
-                                else:
-                                    print('Infelizmente você foi reprovado com média {:.2f}'.format(media1))
-                                médias += media1
-                                
+            aluno = input('Qual unidade você deseja acessar: ')
+        
+                
+            if aluno == '1':
+                
+                    print('Você escolheu verificar as notas da primeira unidade')
+                    print('Para ser aprovador você precisa de média 5')
+                    print('Nesta unidade serão 3 avaliações')
+                    nota1 = float(input('Digite sua primeira nota: '))
+                    nota2 = float(input('Digite sua segunda nota: '))
+                    nota3 = float(input('Digite sua terceira nota: '))
+                    nota4 = float(input('Digite sua quarta nota: '))
+                    media1 = (nota1 + nota2 + nota3 + nota4) / 4
+                    print('Sua média foi de {:.2f}'.format(media1))
+                    if media1 >= 5:
+                        print('Parabéns você foi aprovado com média {:.2f}'.format(media1))
+                    else:
+                        print('Infelizmente você foi reprovado com média {:.2f}'.format(media1))
+                    médias += media1
+                    
+                
 
-                            elif aluno == '2':
-                                    
-                                    print('Você escolheu verificar as notas da segunda unidade')
-                                    print('Para ser aprovado você precisa de média 5')
-                                    print('Nesta unidade serão 5 avaliações')
-                                    nota1 = float(input('Digite sua primeira nota: '))
-                                    nota2 = float(input('Digite sua segunda nota: '))
-                                    nota3 = float(input('Digite sua terceira nota: '))
-                                    media2 = (nota1 + nota2 + nota3  )/ 3
-                                    print('Sua média foi de {:.2f}'.format(media2))
-                                    if media2 >= 5:
-                                        print('Parabéns, você foi aprovado com média {:.2f}'.format(media2))
-                                    else:
-                                        print('Infelizmente você foi reprovado com média {:.2f}'.format(media2))
-                                    médias += media2
-                                    
-                                   
-                            elif aluno == '3':
-                                    
-                                    print('Você escolheu verificar as notas da terceira unidade')
-                                    print('Para ser aprovado você precisa de média 5')
-                                    print('Nesta unidade serão 4 avaliações')
-                                    nota1 = float(input('Digite sua primeira nota: '))
-                                    nota2 = float(input('Digite sua segunda nota: '))
-                                    media3 = (nota1 + nota2 )/ 2
-                                    print('Sua média foi de {:.2f}'.format(media3))
-                                    if media3 >= 5:
-                                        print('Parabéns você foi aprovado com média {:.2f}'.format(media3))
-                                    else:
-                                        print('Infelizmente você foi reprovado com média {:.2f}'.format(media3))
-                                    médias+= media3
-                                    
-                                    
-                            elif aluno == '4':
-                                if médias / 3 >= 5:
-                                    print('Aprovado com média {:.2f}'.format(médias/3))
-                                    break
-                                else:
-                                    print('reprovado')
-                                    break
-                                
-                            elif aluno == '5':
-                                print("Obrigado, tenha um bom dia!")
-                                break
+            elif aluno == '2':
+                
+                    print('Você escolheu verificar as notas da segunda unidade')
+                    print('Para ser aprovado você precisa de média 5')
+                    print('Nesta unidade serão 5 avaliações')
+                    nota1 = float(input('Digite sua primeira nota: '))
+                    nota2 = float(input('Digite sua segunda nota: '))
+                    media2 = (nota1 + nota2  )/ 2
+                    print('Sua média foi de {:.2f}'.format(media2))
+                    if media2 >= 5:
+                        print('Parabéns, você foi aprovado com média {:.2f}'.format(media2))
+                    else:
+                        print('Infelizmente você foi reprovado com média {:.2f}'.format(media2))
+                    médias += media2
+                    
+            elif aluno == '3':
+                    
+                    print('Você escolheu verificar as notas da terceira unidade')
+                    print('Para ser aprovado você precisa de média 5')
+                    print('Nesta unidade serão 4 avaliações')
+                    nota1 = float(input('Digite sua primeira nota: '))
+                    nota2 = float(input('Digite sua segunda nota: '))
+                    media3 = (nota1 + nota2 )/ 2
+                    print('Sua média foi de {:.2f}'.format(media3))
+                    if media3 >= 5:
+                        print('Parabéns você foi aprovado com média {:.2f}'.format(media3))
+                    else:
+                        print('Infelizmente você foi reprovado com média {:.2f}'.format(media3))
+                    médias+= media3
+                    
+                    
+            elif aluno == '4':
+                    if médias / 3 >= 5:
+                        print('Aprovado com média {:.2f}'.format(médias/3))
+                    else:
+                        print('reprovado')
+                    
+            elif aluno == '5':
+                print("Obrigado, tenha um bom dia!")
+                break
 
-                            else:
-                                print("Invalid Option!")
-                          
+            else:
+                print("Option Invalid!")
+            
+    if aluno == '5':
+        while True:
+            print("""Welcome to Algorithms and Programming Logic!
+            This is your average calculator for your first period of ALP!
+            Given by: Prof Dr. Flavius Gorgônio
+            Le'ts calculate your average this semester...""")
+            print('=+'*40)
+            print("""
+            ========== Unity: 1 =================
+            ========== Unity: 2 =================
+            ========== Unity: 3 =================
+            ========== Final Result: 4 =========
+            ========== Exit Menu: 5 ============
+            ========== Return to Main Menu: 0 ===
+            """)
+            print('+='*40)
+            print('Loading...')
+            sleep(1)
+            i = 0
+            médias = 0
+
+
+            aluno = input('Qual unidade você deseja acessar: ')
+            
+            if aluno == '1':
+                
+                print('Você escolheu verificar as notas da primeira unidade')
+                print('Para ser aprovador você precisa de média 5')
+                print('Nesta unidade serão 3 avaliações')
+                nota1 = float(input('Digite sua primeira nota: '))
+                nota2 = float(input('Digite sua segunda nota: '))
+                nota3 = float(input('Digite sua terceira nota: '))
+                nota4 = float(input('Digite sua quarta nota: '))
+                nota5 = float(input('Digite sua quinta nota: '))
+                media1 = (nota1 + nota2 + nota3 + nota4 + nota5) / 5
+                print('Sua média foi de {:.2f}'.format(media1))
+                if media1 >= 5:
+                    print('Parabéns você foi aprovado com média {:.2f}'.format(media1))
+                else:
+                    print('Infelizmente você foi reprovado com média {:.2f}'.format(media1))
+                médias += media1
+                
+
+            elif aluno == '2':
+                    
+                    print('Você escolheu verificar as notas da segunda unidade')
+                    print('Para ser aprovado você precisa de média 5')
+                    print('Nesta unidade serão 5 avaliações')
+                    nota1 = float(input('Digite sua primeira nota: '))
+                    nota2 = float(input('Digite sua segunda nota: '))
+                    nota3 = float(input('Digite sua terceira nota: '))
+                    media2 = (nota1 + nota2 + nota3  )/ 3
+                    print('Sua média foi de {:.2f}'.format(media2))
+                    if media2 >= 5:
+                        print('Parabéns, você foi aprovado com média {:.2f}'.format(media2))
+                    else:
+                        print('Infelizmente você foi reprovado com média {:.2f}'.format(media2))
+                    médias += media2
+                    
+                    
+            elif aluno == '3':
+                    
+                    print('Você escolheu verificar as notas da terceira unidade')
+                    print('Para ser aprovado você precisa de média 5')
+                    print('Nesta unidade serão 4 avaliações')
+                    nota1 = float(input('Digite sua primeira nota: '))
+                    nota2 = float(input('Digite sua segunda nota: '))
+                    media3 = (nota1 + nota2 )/ 2
+                    print('Sua média foi de {:.2f}'.format(media3))
+                    if media3 >= 5:
+                        print('Parabéns você foi aprovado com média {:.2f}'.format(media3))
+                    else:
+                        print('Infelizmente você foi reprovado com média {:.2f}'.format(media3))
+                    médias+= media3
+                    
+                    
+            elif aluno == '4':
+                if médias / 3 >= 5:
+                    print('Aprovado com média {:.2f}'.format(médias/3))
+                    break
+                else:
+                    print('reprovado')
+                    break
+                
+            elif aluno == '5':
+                print("Obrigado, tenha um bom dia!")
+                break
+
+            else:
+                print("Invalid Option!")
+            
                 
 
 def lapyear():
