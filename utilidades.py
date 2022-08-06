@@ -204,37 +204,22 @@ def utili():
                                         print('Infelizmente você foi reprovado com média {:.2f}'.format(media3))
                                     médias+= media3
                                     
-                                    aluno = input('Qual unidade você deseja acessar: ')
-                                    i += 0
-                             elif aluno == '4':
+                                    
+                            elif aluno == '4':
                                     if médias / 3 >= 5:
                                         print('Aprovado com média {:.2f}'.format(médias/3))
                                     else:
                                         print('reprovado')
-                                    aluno = input('Qual unidade você deseja acessar: ')
-                                    i+=1
+                                    
                             elif aluno == '5':
                                     print("Obrigado, tenha um bom dia!")
                                     break
 
-                            elif aluno > '5':
-                                    print('Opção inválida, tente novamente')
-                                    aluno = input('Qual unidade você deseja acessar: ')
-                                    i+=1
-                            while aluno == '0':
-                                print("""Welcome to the average calculator to BSI!
-                                Below are the articles from this period!
-
-                                ====== Introduction to Informatics [1]
-                                ====== General Theory of Administration [2]
-                                ====== Logic [3]
-                                ====== Fundamentals of Mathematics [4]
-                                ====== Algorithms and Programming Logic [5]
-                                """)
-                                aluno = input('Escolha uma opção: ')
-                                i+=1
+                            else:
+                                print('Opção inválida!')
+                           
                     if aluno == '3':
-                        
+                        while True:
                             print("""Welcome to Logic!
                             This is your average calculator for your first period of LGC!
                             Given by: Prof Dr. João Paulo
@@ -251,35 +236,28 @@ def utili():
                             print('+='*40)
                             print('Loading...')
                             sleep(1)
-                            i = 0
+                         
                             médias = 0
 
 
                             aluno = input('Qual unidade você deseja acessar: ')
-                            while aluno != '0':
+                            if aluno == '1':
                                 
-                                if aluno == '1':
-                                
-                                    print('Você escolheu verificar as notas da primeira unidade')
-                                    print('Para ser aprovador você precisa de média 5')
-                                    print('Nesta unidade serão 3 avaliações')
-                                    nota1 = float(input('Digite sua primeira nota: '))
-                                    nota2 = float(input('Digite sua segunda nota: '))
-                                    nota3 = float(input('Digite sua terceira nota: '))
-                                    media1 = (nota1 + nota2 + nota3) / 3
-                                    print('Sua média foi de {:.2f}'.format(media1))
-                                    if media1 >= 5:
-                                        print('Parabéns você foi aprovado com média {:.2f}'.format(media1))
-                                    else:
-                                        print('Infelizmente você foi reprovado com média {:.2f}'.format(media1))
-                                    médias += media1
-                                    
-                                
-                                    aluno = input('Qual unidade você deseja acessar: ')
-                                    i += 0
-                                        
-
-                                elif aluno == '2':
+                                print('Você escolheu verificar as notas da primeira unidade')
+                                print('Para ser aprovador você precisa de média 5')
+                                print('Nesta unidade serão 3 avaliações')
+                                nota1 = float(input('Digite sua primeira nota: '))
+                                nota2 = float(input('Digite sua segunda nota: '))
+                                nota3 = float(input('Digite sua terceira nota: '))
+                                media1 = (nota1 + nota2 + nota3) / 3
+                                print('Sua média foi de {:.2f}'.format(media1))
+                                if media1 >= 5:
+                                    print('Parabéns você foi aprovado com média {:.2f}'.format(media1))
+                                else:
+                                    print('Infelizmente você foi reprovado com média {:.2f}'.format(media1))
+                                médias += media1
+                            
+                            elif aluno == '2':
                                     
                                     print('Você escolheu verificar as notas da segunda unidade')
                                     print('Para ser aprovado você precisa de média 5')
@@ -295,10 +273,9 @@ def utili():
                                         print('Infelizmente você foi reprovado com média {:.2f}'.format(media2))
                                     médias += media2
                                     
-                                    aluno = input('Qual unidade você deseja acessar: ')
-                                    i += 0
-                                elif aluno == '3':
-                                    
+                                   
+                            elif aluno == '3':
+                                while True:    
                                     print('Você escolheu verificar as notas da terceira unidade')
                                     print('Para ser aprovado você precisa de média 5')
                                     print('Nesta unidade serão 4 avaliações')
@@ -314,36 +291,19 @@ def utili():
                                         print('Infelizmente você foi reprovado com média {:.2f}'.format(media3))
                                     médias+= media3
                                     
-                                    aluno = input('Qual unidade você deseja acessar: ')
-                                    i += 0
-                                elif aluno == '4':
-                                    if médias / 3 >= 5:
-                                        print('Aprovado com média {:.2f}'.format(médias/3))
-                                    else:
-                                        print('reprovado')
-                                    aluno = input('Qual unidade você deseja acessar: ')
-                                    i+=1
-                                elif aluno == '5':
-                                    print("Obrigado, tenha um bom dia!")
-                                    break
+                            elif aluno == '4':
+                                if médias / 3 >= 5:
+                                    print('Aprovado com média {:.2f}'.format(médias/3))
+                                else:
+                                    print('reprovado')
+                                        
+                            elif aluno == '5':
+                                print("Obrigado, tenha um bom dia!")
+                                break
 
-                                elif aluno > '5':
-                                    print('Opção inválida, tente novamente')
-                                    aluno = input('Qual unidade você deseja acessar: ')
-                                    i+=1
-                            while aluno == '0':
+                            else:
+                                print("Option invalid!")
                                 
-                                print("""Welcome to the average calculator to BSI!
-                                Below are the articles from this period!
-
-                                ====== Introduction to Informatics [1]
-                                ====== General Theory of Administration [2]
-                                ====== Logic [3]
-                                ====== Fundamentals of Mathematics [4]
-                                ====== Algorithms and Programming Logic [5]
-                                """)
-                                aluno = input('Escolha uma opção: ')
-                                i+=1
                     if aluno == '4':
                             print("""Welcome to Fundamentals of Mathematics!
                             This is your average calculator for your first period of FM!
