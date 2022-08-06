@@ -32,7 +32,7 @@ i'm here to help you.
         games()
 
     elif user == "utilites":
-        utilidades()
+        utilidades.utili()
     else:
         print("Invalid option")
 

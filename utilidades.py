@@ -5,7 +5,7 @@ from time import sleep
 
 
 
-def utilidades():
+def utili():
     os.system("cls")
     print('Welcome to utilities, here I bring you more options for our platform!')
     print('Do you want to continue?')
@@ -19,10 +19,10 @@ def utilidades():
             while user == 'yes':
                 print('Welcome to utilities menu!!!')
                 print('Please choose from the options below!')
-                print('''            =======================================================
-                ==================== Utilities \U0001f5fa\uFE0F  =====================
-                ================ 1 - Leap Year Calendar \U0001F4C5 ==================
-                ================ 2 - Average Calculator ===================
+                print('''  
+                | --------------------- Menu Utilities \U0001f5fa\uFE0F --------------------- |
+                | ------------------ 1 - Leap Year Calendar \U0001F4C5 ---------------------- |
+                | ------------------ 2 - Average Calculator --------------------------------- |
                 
                 
                 ''')
@@ -44,6 +44,7 @@ def utilidades():
                     student = input('Choose an option: ')
                     
                     if student == '1':
+                        while True:
                             print("""Welcome to Introduction to Informatics!
                             This is your average calculator for your first period of INTF!
                             Given by: Prof Luiz Paulo
@@ -54,8 +55,7 @@ def utilidades():
                             ========== Unity: 2 =================
                             ========== Unity: 3 =================
                             ========== Final Result: 4 =========
-                            ========== Exit Menu: 5 ============
-                            ========== Return to Main Menu: 0 ===
+                            ========== Exit Menu: 5 =============
                             """)
                             print('+='*40)
                             print('Loading...')
@@ -65,9 +65,8 @@ def utilidades():
 
 
                             student = input('Which unity do you want to access: ')
-                            while student != '0':
-                                
-                                if student == '1':
+                        
+                            if student == '1':
                                 
                                     print('You chose to chek the first unit grades')
                                     print('To be approved you need an average of 5')
@@ -81,13 +80,10 @@ def utilidades():
                                     else:
                                         print('Unfortunately you failed with average {:.2f}'.format(average1))
                                     average += average1
-                                    
-                                
-                                    student = input('Which unit do you want to access: ')
-                                    i += 0
+
                                         
 
-                                elif student == '2':
+                            elif student == '2':
                                     
                                     print('You chose to chek the second unit grades')
                                     print('To be approved you need an average of 5')
@@ -103,9 +99,8 @@ def utilidades():
                                         print('Unfortunately you failed with average {:.2f}'.format(average2))
                                     average += average2
                                     
-                                    student = input('Which unit do you want to access: ')
-                                    i += 0
-                                elif student == '3':
+                                    
+                            elif student == '3':
                                     
                                     print('You chose to chek the third unit grades')
                                     print('To be approved you need an average of 5')
@@ -122,38 +117,24 @@ def utilidades():
                                         print('Unfortunately you failed with average {:.2f}'.format(average3))
                                     average += average3
                                     
-                                    student = input('Which unit do you want to access: ')
-                                    i += 0
-                                elif student == '4':
+                                   
+                            elif student == '4':
                                     if average / 3 >= 5:
                                         print('Approved by Average!!! {:.2f}'.format(average/3))
                                     else:
                                         print("Failed but don't drop out of the course")
-                                    student = input('Which unit do you want to access: ')
-                                    i+=1
-                                elif student == '5':
+                                 
+                            elif student == '5':
                                     print("Thank you, have a great day!")
                                     break
 
-                                elif student > '5':
+                            else:
                                     print('Invalid option, try again!')
-                                    student = input('Which unit do you want to access: ')
-                                    i+=1
                                     
-                            while student == '0':
-                                
-                                print("""Welcome to the average calculator to BSI!
-                                Below are the articles from this period!
-
-                                ====== Introduction to Informatics [1]
-                                ====== General Theory of Administration [2]
-                                ====== Logic [3]
-                                ====== Fundamentals of Mathematics [4]
-                                ====== Algorithms and Programming Logic [5]
-                                """)
-                                aluno = input('Escolha uma opção: ')
-                                i+=1
-                    if aluno == '2':
+                                    
+                          
+                    if student == '2':
+                        while True:
                             print("""Welcome to General Theory of Administration!
                             This is your average calculator for your first period of TGA!
                             Given by: Prof. Dra Adrianne Souza
@@ -170,14 +151,10 @@ def utilidades():
                             print('+='*40)
                             print('Loading...')
                             sleep(1)
-                            i = 0
-                            médias = 0
-
-
+                    
                             aluno = input('Qual unidade você deseja acessar: ')
-                            while aluno != '0':
-                                
-                                if aluno == '1':
+                           
+                            if aluno == '1':
                                 
                                     print('Você escolheu verificar as notas da primeira unidade')
                                     print('Para ser aprovador você precisa de média 5')
@@ -194,11 +171,7 @@ def utilidades():
                                     médias += media1
                                     
                                 
-                                    aluno = input('Qual unidade você deseja acessar: ')
-                                    i += 0
-                                        
-
-                                elif aluno == '2':
+                            elif aluno == '2':
                                     
                                     print('Você escolheu verificar as notas da segunda unidade')
                                     print('Para ser aprovado você precisa de média 5')
@@ -213,10 +186,8 @@ def utilidades():
                                     else:
                                         print('Infelizmente você foi reprovado com média {:.2f}'.format(media2))
                                     médias += media2
-                                    
-                                    aluno = input('Qual unidade você deseja acessar: ')
-                                    i += 0
-                                elif aluno == '3':
+                                  
+                            elif aluno == '3':
                                     
                                     print('Você escolheu verificar as notas da terceira unidade')
                                     print('Para ser aprovado você precisa de média 5')
@@ -235,18 +206,18 @@ def utilidades():
                                     
                                     aluno = input('Qual unidade você deseja acessar: ')
                                     i += 0
-                                elif aluno == '4':
+                             elif aluno == '4':
                                     if médias / 3 >= 5:
                                         print('Aprovado com média {:.2f}'.format(médias/3))
                                     else:
                                         print('reprovado')
                                     aluno = input('Qual unidade você deseja acessar: ')
                                     i+=1
-                                elif aluno == '5':
+                            elif aluno == '5':
                                     print("Obrigado, tenha um bom dia!")
                                     break
 
-                                elif aluno > '5':
+                            elif aluno > '5':
                                     print('Opção inválida, tente novamente')
                                     aluno = input('Qual unidade você deseja acessar: ')
                                     i+=1
