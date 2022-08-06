@@ -1,10 +1,28 @@
 import time
+from validacoes import *
+import pickle
 
 
+def listbook():
+    try:
+        booklist = open("booklist.dat", "rb")
+        diary = pickle.load(booklist)
+        booklist.close
+    except:
+        booklist = open("booklist.dat", "wb")
+        booklist.close()
+    return diary
+
+def savebook(diary):
+    booklist = open("booklist.dat", "wb")
+    pickle.dump(diary, booklist)
+    booklist.close()
+
+diary = {}
 
 
 def book():
-    diary = []
+    
     print('Wonderfull, you chose to access the menu')
     print("Let's go \U0001F51B ...")
     time.sleep(1)
