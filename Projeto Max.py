@@ -11,7 +11,7 @@ while True:
     option = ''
     print('WELCOME TO UFRN \U0001f600 !!!')
     print('''My name is Helena \U0001F600 , i'm the campus virtual assistant, 
-    i'm here to help you.
+i'm here to help you.
     ''')
     print('But first, i need to ask you a question...')
     time.sleep(1)
