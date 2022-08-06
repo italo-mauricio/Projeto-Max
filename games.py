@@ -1,4 +1,8 @@
+from validacoes import *
+from agenda import *
+from random import randint
 
+diary1 = diary
 
 def gaming():
     option = ''
