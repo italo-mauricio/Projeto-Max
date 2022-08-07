@@ -1,10 +1,12 @@
 from validacoes import *
 from agenda import *
 from random import randint
+import os
 
 diary1 = diary
 
 def gaming():
+    os.system("cls")
     option = ''
     print('You chose the games option!')
     print('Welcome to the player options menu')
@@ -19,14 +21,16 @@ def gaming():
     if user == 'yes':
         while user == 'yes':
             print('Welcome to the games menu, take your pick! ')
-            print('''        ============================================
-        ============================================
-        ===============  GAMES! ====================
-        ========= 1 - Gessing Game \U0001F3B2 ==============
-        ========= 2 - Tic-Tak-Toe Game \U0001F475 ==========
-        ========= 3 - Jokenpô \u2702\uFE0F ====================
-        ========= 4 - Saída \U0001F6B6 =====================
-        ============================================
+            print('''
+            | ===================================================== |
+            | ----------------------------------------------------- |
+            | ===================  GAMES! ========================= |
+            | ---------- 1 - Gessing Game \U0001F3B2 -------------- |
+            | ---------- 2 - Tic-Tak-Toe Game \U0001F475 ---------- |
+            | ---------- 3 - Jokenpô \u2702\uFE0F ----------------- |
+            | ---------- 4 - Saída \U0001F6B6 --------------------- |
+            | ----------------------------------------------------- |
+            | ===================================================== |
             ''')
 
             player = str(input("What's your choice: ")).lower()
