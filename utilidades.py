@@ -1,9 +1,10 @@
 from validacoes import *
 import os
 from time import sleep
+from agenda import *
 
 
-
+diary2 = diary
 
 def utili():
     os.system("cls")
@@ -17,13 +18,14 @@ def utili():
             print('Okay, good bye!')
         if user == 'yes':
             while user == 'yes':
+                os.system("cls")
                 print('Welcome to utilities menu!!!')
                 print('Please choose from the options below!')
                 print('''  
                 | --------------------- Menu Utilities \U0001f5fa\uFE0F --------------------- |
                 | ------------------ 1 - Leap Year Calendar \U0001F4C5 ---------------------- |
                 | ------------------ 2 - Average Calculator --------------------------------- |
-                
+                | --------------------------------------------------------------------------- |
                 
                 ''')
 
@@ -59,11 +61,11 @@ def calculator():
     
     if student == '1':
         while True:
+            os.system("cls")
             print("""Welcome to Introduction to Informatics!
             This is your average calculator for your first period of INTF!
             Given by: Prof Luiz Paulo
             Le'ts calculate your average this semester...""")
-            print('=+'*40)
             print("""
             | ------------------------------ |
             | ========== Unity: 1 ========== |
@@ -73,17 +75,13 @@ def calculator():
             | ======== Exit Menu: 5 ======== |
             | ------------------------------ |
             """)
-            print('+='*40)
             print('Loading...')
             sleep(1)
-            i = 0
             average = 0
-
-
             student = input('Which unity do you want to access: ')
         
             if student == '1':
-                
+                    os.system("cls")
                     print('You chose to chek the first unit grades')
                     print('To be approved you need an average of 5')
                     print('In this unit there will be 2 avalutations')
@@ -96,11 +94,11 @@ def calculator():
                     else:
                         print('Unfortunately you failed with average {:.2f}'.format(average1))
                     average += average1
-
-                        
+                    savebook(diary2)
+                    input("Tap for continue: ")
 
             elif student == '2':
-                    
+                    os.system("cls")
                     print('You chose to chek the second unit grades')
                     print('To be approved you need an average of 5')
                     print('In this unit there will be 3 avalutations')
@@ -114,6 +112,8 @@ def calculator():
                     else:
                         print('Unfortunately you failed with average {:.2f}'.format(average2))
                     average += average2
+                    savebook(diary2)
+                    input("Tap for continue: ")
                     
                     
             elif student == '3':
@@ -132,20 +132,26 @@ def calculator():
                     else:
                         print('Unfortunately you failed with average {:.2f}'.format(average3))
                     average += average3
+                    savebook(diary2)
+                    input("Tap for continue: ")
                     
                     
             elif student == '4':
-                    if average / 3 >= 5:
-                        print('Approved by Average!!! {:.2f}'.format(average/3))
-                    else:
-                        print("Failed but don't drop out of the course")
+                os.system("cls")
+                if average / 3 >= 5:
+                    print('Approved by Average!!! {:.2f}'.format(average/3))
+                else:
+                    print("Failed but don't drop out of the course")
+                savebook(diary2)
+                input("Tap for continue: ")
                     
             elif student == '5':
-                    print("Thank you, have a great day!")
-                    break
+                os.system("cls")
+                print("Thank you, have a great day!")
+                break
 
             else:
-                    print('Invalid option, try again!')
+                print('Invalid option, try again!')
                     
                     
             
