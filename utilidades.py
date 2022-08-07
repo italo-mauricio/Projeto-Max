@@ -39,14 +39,21 @@ def utili():
 
 
 def calculator():
-    print("""Welcome to the average calculator to BSI!
-    Below are the articles from this period!
-
-    ====== Introduction to Informatics [1]
-    ====== General Theory of Administration [2]
-    ====== Logic [3]
-    ====== Fundamentals of Mathematics [4]
-    ====== Algorithms and Programming Logic [5]
+    os.system("cls")
+    print("""
+    
+    | ============================================================= |
+    | ------------------------------------------------------------- |
+    | -------- Welcome to the average calculator to BSI! ---------- |
+    | -------- Below are the articles from this period!  ---------- |
+    | ============================================================= |
+    | -------- Introduction to Informatics [1] -------------------- |
+    | -------- General Theory of Administration [2] --------------- |
+    | -------- Logic [3] ------------------------------------------ |
+    | -------- Fundamentals of Mathematics [4] -------------------- |
+    | -------- Algorithms and Programming Logic [5] --------------- |
+    | ------------------------------------------------------------- |
+    | ============================================================= |
     """)
     student = input('Choose an option: ')
     
@@ -502,7 +509,7 @@ def lapyear():
     | ------------------------------------------------------------- |
     | ============================================================= |
     ''')
-    print("let's check if the year you entered is valid or not")
+    
     day = int(input('Inform the day: '))
     month = int(input('Inform the month: '))
     year = int(input('Inform the year: '))
