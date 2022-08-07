@@ -1,3 +1,4 @@
+
 import time
 from validacoes import *
 import pickle
@@ -91,6 +92,50 @@ def book():
         
         elif option == '3':
             while True:
+                os.system("cls")
+                print("Let's change your data")
+                print("Loading...")
+                time.sleep(1)
+                cpf = input("Inser your CPF: ")
+                if cadastrocpf(cpf):
+                    if cpf not in diary:
+                        print("CPF not found")
+                        input("Press ENTER to return to the menu")
+                    else:
+                        print('CPF found')
+                        print(diary[cpf])
+                        while True:
+                            edit = input("Which item do you want to change? ")
+                            if edit == 'name':
+                                newname = input("Type your new name: ")
+                                diary[cpf][0] = newname
+                                print("Name changed sucessfully!")
+                                savebook(diary)
+                                input("Press ENTER to return to the menu")
+                                book()
+                            if edit == 'email':
+                                newemail = input("Type your new email: ")
+                                if validemail(newemail):
+                                    diary[cpf][1] = newemail
+                                    print("Email changed sucessfully!")
+                                    savebook(diary)
+                                    input("Press ENTER to return to the menu")
+                                    book()
+                                else:
+                                    print("Invalid Email")
+                            if edit == 'fone':
+                                newfone = int(input("Type your new fone:"))
+                                diary[cpf][2] = newfone
+                                print('Fone changed sucessfully!')
+                                savebook(diary)
+                                input("Press ENTER to return to the menu")
+                                book()
+                            else:
+                                print('Invalid option!')
+                else:
+                    print("CPF invalid!")
+
+
             
 
         
