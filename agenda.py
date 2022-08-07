@@ -34,8 +34,8 @@ def book():
             | ------------- Contact Book \U0001F4D5 --------------- |
             | ----------------------------------------------------- |
             | ------------- 1 - Register \U0001F4D6 --------------- |
-            | ------------- 2 - Display  \U0001F9D0 --------------- |
-            | ------------- 3 - Search   \U0001F513 --------------- |
+            | ------------- 2 - Search   \U0001F513 --------------- |
+            | ------------- 3 - Edit     \U0001F513 --------------- |
             | ------------- 4 - Remove   \U0001F504 --------------- |
             | ------------- 5 - Close    \U0001F519 --------------- |
             | ----------------------------------------------------- |
@@ -105,15 +105,15 @@ def book():
                         print('CPF found')
                         print(diary[cpf])
                         while True:
-                            edit = input("Which item do you want to change? ")
-                            if edit == 'name':
+                            edit = input("Which item do you want to change? ").strip().upper()
+                            if edit == 'name'.upper():
                                 newname = input("Type your new name: ")
                                 diary[cpf][0] = newname
                                 print("Name changed sucessfully!")
                                 savebook(diary)
                                 input("Press ENTER to return to the menu")
                                 book()
-                            if edit == 'email':
+                            if edit == 'email'.upper():
                                 newemail = input("Type your new email: ")
                                 if validemail(newemail):
                                     diary[cpf][1] = newemail
@@ -123,7 +123,7 @@ def book():
                                     book()
                                 else:
                                     print("Invalid Email")
-                            if edit == 'fone':
+                            if edit == 'fone'.upper():
                                 newfone = int(input("Type your new fone:"))
                                 diary[cpf][2] = newfone
                                 print('Fone changed sucessfully!')
