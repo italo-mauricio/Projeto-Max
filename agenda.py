@@ -61,23 +61,21 @@ def book():
             print('Congratulations, your registration was succesfull!!! \U0001F929')
             print('Loading Menu...')
             time.sleep(1)
-            print()
             
         
         elif option == '2':
-            print()
-            print('You chose option 2')
+            os.system("cls")
             print('We will show you all registered contacts!')
             time.sleep(1)
             print('Loading Contacts..')
-            for i in diary:
-                print('Name:\t', i[0])
-                print('Email:\t', i[1])
-                print('Contact Number:\t', i[2])
-                print()
-                print('Wonderful, here are the contacts we found for you! \U0001F609')
-                print('Loadin menu...')
-                time.sleep(1)
+            cpf = input('Insert your CPF:')
+            if cpf not in diary:
+                print('CPF not found')
+                break
+            else:
+                print("CPF found")
+                print(diary[cpf])
+
         
         elif option == '3':
             print()
