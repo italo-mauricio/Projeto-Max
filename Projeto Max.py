@@ -5,6 +5,10 @@ from time import sleep
 from agenda import *
 import games
 import utilidades
+
+
+
+
 diary = []
 while True:
     os.system("cls")

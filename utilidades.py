@@ -493,7 +493,15 @@ def calculator():
                 
 
 def lapyear():
-    print('Welcome to the leap year calculator!')
+    os.system("cls")
+    print('''
+    | ============================================================= |
+    | ------------------------------------------------------------- |
+    | ---------- Welcome to the leap year calculator! ------------- |
+    | ---- let's check if the year you entered is valid or not ---- |
+    | ------------------------------------------------------------- |
+    | ============================================================= |
+    ''')
     print("let's check if the year you entered is valid or not")
     day = int(input('Inform the day: '))
     month = int(input('Inform the month: '))
