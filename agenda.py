@@ -18,7 +18,7 @@ def savebook(diary):
     pickle.dump(diary, booklist)
     booklist.close()
 
-diary = {}
+diary = listbook()
 
 
 def book():
@@ -85,9 +85,16 @@ def book():
                 else:
                     print("CPF found")
                     print(diary[cpf])
+                input("Press ENTER to return to the menu")
+                book()
 
         
         elif option == '3':
+            while True:
+            
+
+        
+        elif option == '4':
             while True:
                 os.system("cls")
                 print("We'll find you some contact for you!")
@@ -100,22 +107,8 @@ def book():
                     del diary[cpf_search]
                     print("Contact removed")
                     savebook(diary)
-
-        
-        elif option == '4':
-            print()
-            print('You chose option 4')
-            print('So you want to remove a contact from your diary?')
-            print("Okay... let's go.")
-            name_remove = input('Qual contato vc quer remover: ')
-            remove = False
-            for name_remove in diary:
-                
-                remove = True
-                diary.remove(name_remove)
-                print('Contato removido')
-            if not remove:
-                print('Opção inválida')
+                input("Press ENTER to return to the menu")
+                break
             
             
         elif option == '5':
