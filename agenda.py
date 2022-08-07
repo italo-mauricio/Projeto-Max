@@ -1,7 +1,7 @@
 import time
 from validacoes import *
 import pickle
-
+import os
 
 def listbook():
     try:
@@ -22,7 +22,7 @@ diary = {}
 
 
 def book():
-    
+    os.system("cls")
     print('Wonderfull, you chose to access the menu')
     print("Let's go \U0001F51B ...")
     time.sleep(1)
@@ -43,14 +43,24 @@ def book():
         option = input('Choose one of the options: ')
         contact = False
         if option == '1':
-            print()
-            print('You chose option 1')
+            os.system("cls")
             print("Let's register you in the system")
             contact = []
-            name = input('Please, type your name: ').lower()
-            contact.append(name)
-            email = input('Please, type your email: ').lower()
-            contact.append(email)
+            while True:
+                name = input('Please, type your name: ').lower()
+                if validstring(name):
+                    contact.append(name)
+                    break
+                else:
+                    print('Invalid name')
+            while True:
+                email = input('Please, type your email: ').lower()
+                if validemail(email):
+                    contact.append(email)
+                    break
+                else:
+                    print('Invaldi email')
+
             fone = int(input('Please, enter your contact number: '))
             contact.append(fone)
             cpf = input("Please, type your CPF: ")
