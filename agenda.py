@@ -74,41 +74,34 @@ def book():
             
         
         elif option == '2':
-            os.system("cls")
-            print('We will show you all registered contacts!')
-            time.sleep(1)
-            print('Loading Contacts..')
-            cpf = input('Insert your CPF:')
-            if cpf not in diary:
-                print('CPF not found')
-                break
-            else:
-                print("CPF found")
-                print(diary[cpf])
+            while True:
+                os.system("cls")
+                print('We will show you all registered contacts!')
+                time.sleep(1)
+                print('Loading Contacts..')
+                cpf = input('Insert your CPF:')
+                if cpf not in diary:
+                    print('CPF not found')
+                    book()
+                else:
+                    print("CPF found")
+                    print(diary[cpf])
 
         
         elif option == '3':
-            print()
-            print("You chose option 3")
-            print("We'll find you some contact for you!")
-            name_search = input('Which contact do you want to find in our system?: ')
-            demand = False
-            for people in diary:
-                if name_search.upper() in people[0].upper():
-                    demand = True
-                    print('Searching...')
-                    time.sleep(1)
-                    print('We found!')
-                    print('Name:\t', people[0])
-                    print('Email:\t', people[1])
-                    print('Contact Number:\t', people[2])
-                    print('Hope it was of great help to you!\U0001F606')
-            if not demand:
-                print("Unfortunately we could't findthe contact \U0001F914")
-                print("Loading Menu...")
-                time.sleep(1)
-            print()
-        
+            while True:
+                os.system("cls")
+                print("We'll find you some contact for you!")
+                cpf_search = input('Which contact do you want to find in our system?: ')
+                if cpf_search not in diary:
+                    print("CPF not found")
+                    book()
+                else:
+                    print("CPF found")
+                    del diary[cpf_search]
+                    print("Contact removed")
+                    savebook(diary)
+
         
         elif option == '4':
             print()
