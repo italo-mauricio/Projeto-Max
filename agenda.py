@@ -53,7 +53,11 @@ def book():
             contact.append(email)
             fone = int(input('Please, enter your contact number: '))
             contact.append(fone)
-            diary.append(contact)
+            cpf = input("Please, type your CPF: ")
+            if cadastrocpf(cpf):
+                diary[cpf] = contact
+                print("Contact registred sucessfully")
+                savebook(diary)
             print('Congratulations, your registration was succesfull!!! \U0001F929')
             print('Loading Menu...')
             time.sleep(1)

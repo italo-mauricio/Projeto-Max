@@ -117,7 +117,7 @@ def calculator():
                     
                     
             elif student == '3':
-                    
+                    os.system("cls")
                     print('You chose to chek the third unit grades')
                     print('To be approved you need an average of 5')
                     print('In this unit there will be 4 avalutations')
@@ -137,18 +137,18 @@ def calculator():
                     
                     
             elif student == '4':
-                os.system("cls")
-                if average / 3 >= 5:
-                    print('Approved by Average!!! {:.2f}'.format(average/3))
-                else:
-                    print("Failed but don't drop out of the course")
-                savebook(diary2)
-                input("Tap for continue: ")
+                    os.system("cls")
+                    if average / 3 >= 5:
+                        print('Approved by Average!!! {:.2f}'.format(average/3))
+                    else:
+                        print("Failed but don't drop out of the course")
+                    savebook(diary2)
+                    input("Tap for continue: ")
                     
             elif student == '5':
-                os.system("cls")
-                print("Thank you, have a great day!")
-                break
+                    os.system("cls")
+                    print("Thank you, have a great day!")
+                    break
 
             else:
                 print('Invalid option, try again!')
