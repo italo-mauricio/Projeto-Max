@@ -422,7 +422,7 @@ def calculator():
                     else:
                         print('reprovado')
                     
-            elif aluno == '5':
+            elif student == '5':
                 print("Obrigado, tenha um bom dia!")
                 break
 
