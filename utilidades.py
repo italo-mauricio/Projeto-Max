@@ -453,18 +453,18 @@ def calculator():
             student = input('Which unity do you want to access: ')
             
             if student == '1':
-                
-                print('Você escolheu verificar as notas da primeira unidade')
-                print('Para ser aprovador você precisa de média 5')
-                print('Nesta unidade serão 3 avaliações')
-                nota1 = float(input('Digite sua primeira nota: '))
-                nota2 = float(input('Digite sua segunda nota: '))
-                nota3 = float(input('Digite sua terceira nota: '))
-                nota4 = float(input('Digite sua quarta nota: '))
-                nota5 = float(input('Digite sua quinta nota: '))
-                media1 = (nota1 + nota2 + nota3 + nota4 + nota5) / 5
-                print('Sua média foi de {:.2f}'.format(media1))
-                if media1 >= 5:
+                os.system("cls")
+                print('You chose to check the first unit grades')
+                print('To be approved you need on average of 5')
+                print('In this unit there will be 5 assessments')
+                note1 = float(input('Digite sua primeira nota: '))
+                note2 = float(input('Digite sua segunda nota: '))
+                note3 = float(input('Digite sua terceira nota: '))
+                note4 = float(input('Digite sua quarta nota: '))
+                note5 = float(input('Digite sua quinta nota: '))
+                average1 = (note1 + note2 + note3 + note4 + note5) / 5
+                print('His average was {:.2f}'.format(average1))
+                if average1 >= 5:
                     print('Parabéns você foi aprovado com média {:.2f}'.format(media1))
                 else:
                     print('Infelizmente você foi reprovado com média {:.2f}'.format(media1))
