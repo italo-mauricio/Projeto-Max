@@ -382,8 +382,6 @@ def calculator():
                     average += average1
                     savebook(diary2)
                     
-                
-
             elif student == '2':
                     os.system("cls")
                     print('You chose to check the second unit grades')
@@ -401,35 +399,38 @@ def calculator():
                     savebook(diary2)
                     
             elif student == '3':
-                    
-                    print('Você escolheu verificar as notas da terceira unidade')
-                    print('Para ser aprovado você precisa de média 5')
-                    print('Nesta unidade serão 4 avaliações')
-                    nota1 = float(input('Digite sua primeira nota: '))
-                    nota2 = float(input('Digite sua segunda nota: '))
-                    media3 = (nota1 + nota2 )/ 2
-                    print('Sua média foi de {:.2f}'.format(media3))
-                    if media3 >= 5:
-                        print('Parabéns você foi aprovado com média {:.2f}'.format(media3))
+                    os.system("cls")
+                    print('You chose to check the third unit grades')
+                    print('To be approved you need an average of 5')
+                    print('In this unit there will be 2 assessments')
+                    note1 = float(input('Type your first note: '))
+                    note2 = float(input('Type your second note: '))
+                    average3 = (note1 + note2 )/ 2
+                    print('His average was {:.2f}'.format(average3))
+                    if average3 >= 5:
+                        print('Congratulations you passed with average {:.2f}'.format(average3))
                     else:
-                        print('Infelizmente você foi reprovado com média {:.2f}'.format(media3))
-                    médias+= media3
+                        print('Unfortunately you failed with average {:.2f}'.format(average3))
+                    average += average3
+                    savebook(diary2)
                     
                     
             elif student == '4':
-                    if médias / 3 >= 5:
-                        print('Aprovado com média {:.2f}'.format(médias/3))
+                    os.system("cls")
+                    if average / 3 >= 5:
+                        print('Passed with average {:.2f}'.format(average/3))
                     else:
-                        print('reprovado')
+                        print('Disapproved')
                     
             elif student == '5':
-                print("Obrigado, tenha um bom dia!")
+                print("Thank you have a good day!")
                 break
 
             else:
-                print("Option Invalid!")
+                print("Invalid Option!")
             
-    if aluno == '5':
+    if student == '5':
+        os.system("cls")
         while True:
             print("""Welcome to Algorithms and Programming Logic!
             This is your average calculator for your first period of ALP!
@@ -449,9 +450,9 @@ def calculator():
             print('Loading...')
             sleep(1)
             average = 0
-            student = input(' ')
+            student = input('Which unity do you want to access: ')
             
-            if aluno == '1':
+            if student == '1':
                 
                 print('Você escolheu verificar as notas da primeira unidade')
                 print('Para ser aprovador você precisa de média 5')
