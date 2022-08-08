@@ -328,7 +328,7 @@ def calculator():
                     
             elif student == '4':
                 if student / 3 >= 5:
-                    print('Passed with average {:.2f}'.format(médias/3))
+                    print('Passed with average {:.2f}'.format(average/3))
                 else:
                     print('Disapproved')
                         
@@ -508,14 +508,14 @@ def calculator():
                     
             elif student == '4':
                 if average / 3 >= 5:
-                    print('Aprovado com média {:.2f}'.format(médias/3))
+                    print('Passed with average {:.2f}'.format(average/3))
                     break
                 else:
-                    print('reprovado')
+                    print('Disapproved')
                     break
                 
-            elif aluno == '5':
-                print("Obrigado, tenha um bom dia!")
+            elif student == '5':
+                print("Thank you have a good day!")
                 break
 
             else:
