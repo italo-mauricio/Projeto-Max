@@ -582,6 +582,7 @@ def lapyear():
         
 
 def binconversor():
+    os.system('cls')
     num = int(input('Digite um número inteiro qualquer: '))
     print('''Escolha uma das bases para a conversão:
     [1] converter para BINÁRIO
