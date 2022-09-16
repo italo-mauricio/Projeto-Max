@@ -22,10 +22,12 @@ def utili():
                 print('Welcome to utilities menu!!!')
                 print('Please choose from the options below!')
                 print('''  
-                | --------------------- Menu Utilities \U0001f5fa\uFE0F --------------------- |
-                | ------------------ 1 - Leap Year Calendar \U0001F4C5 ---------------------- |
-                | ------------------ 2 - Average Calculator --------------------------------- |
-                | --------------------------------------------------------------------------- |
+                | --------------------- Menu Utilities \U0001f5fa\uFE0F ----------- |
+                |                    1 - Leap Year Calendar                         |
+                |                    2 - Average Calculator                         |
+                |                    3 - Bin Conversor                              |
+                |                    4 - Back to menu                               |
+                | ----------------------------------------------------------------- |
                 
                 ''')
 
@@ -35,6 +37,12 @@ def utili():
                     lapyear()
                 elif user == '2':
                     calculator()
+                elif user == '3':
+                    binconversor()
+                elif user == '4':
+                    break
+                else:
+                    print("Option invalid!")
 
 
 
@@ -570,3 +578,23 @@ def lapyear():
         print('Leap Year!')
     else:
         print('Non-leap year')
+        
+        
+
+def binconversor():
+    num = int(input('Digite um número inteiro qualquer: '))
+    print('''Escolha uma das bases para a conversão:
+    [1] converter para BINÁRIO
+    [2] converter para OCTAL
+    [3] converter para HEXADECIMAL''')
+
+    opção = int(input('Sua opção: '))
+
+    if opção == 1:
+        print('{} convertido para BINÁRIO é igual a {}'.format(num, bin(num)[2:]))
+    elif opção == 2:
+        print('{} convertido para OCTAL é igual a {}'.format(num, oct(num)[2:]))
+    elif opção == 3:
+        print('{} convertido para HEXADECIMAL é igual a {}'.format(num, hex(num)[2:]))
+    else:
+        print('Opção inválida!')
