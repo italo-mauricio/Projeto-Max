@@ -8,9 +8,35 @@ class board:
         self.dim_size = dim_size
         self.num_bombs = num_bombs
         
+        # let's create the board
+        # helper function!
         
-        # 
-
+        self.board = self.make_new_board() # plant the bombs
+        
+        
+        
+        # initialize a set to keep track of which locations we've uncovered
+        # we'll (row, col) tuples into this set
+        self.dug = set() # if we dig at 0, 0, then self.bug = {(0,0)}
+    
+    def make_new_board(self):
+        # construct a new board based on the dim size and num bombs
+        # we should construct the list of lists here (or whatever representation you prefer,
+        # but since we have a 2-D board, list of lists is most natural)
+        
+        # generete a new board
+        
+        board = [[None for _ in range(self.dim_size)] for _ in range(self.dim_size)]
+        
+        # this create an array like this:
+        # [[None, None, ..., None]],
+        #  [None, None, ..., None],
+        #  [...                  ],
+        #  [None, None, ..., None]
+        # we can see how this represents a board!
+        
+                
+ 
 
 
 
