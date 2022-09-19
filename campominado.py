@@ -83,6 +83,13 @@ class board:
         for r in range(row-1, (row+1)+1):
             for c in range(col-1, (col+1)+1):
                 if r == row and c == col:
+                    # our original location, don't check
+                    continue
+                if self.board[r][c] == '*':
+                    num_neighboring_bombs += 1
+                    
+        return num_neighboring_bombs
+    
                     
                 
         
