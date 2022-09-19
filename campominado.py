@@ -1,4 +1,5 @@
 import random
+import re
 
 # lets create a board object to represent the minesweeper game
 # this is so that we can just say "create a new object", or
@@ -113,10 +114,25 @@ class board:
                     continue # don't dig where you've already dug
                 self.dig(r, c)
         
+        # if our install dig didn't hit a bomb, we *shouldn't* hit a bombe here
         return True            
                 
         
-
+    def __str__(self):
+        # this is a magic function where if you call print on this object.
+        # it'll print out what this function returns!
+        # return a string that shows the board to the player
+        
+        # first let's create a new array that represents what the user would see
+        visible_board = [[None for _ in range(self.dim_size)] for _ in range(self.dim_size)]
+        for row in range(self.dim_size):
+            for col in range(self.dim_size):
+                if (row, col) in self.dug:
+                    visible_board[row][col] = str(self.board[row][col])
+                else:
+                    visible_board[row][col] = ' '
+                    
+        # put this together in a string              
 
 
 
@@ -130,4 +146,27 @@ def play(dim_size=10, num_bombs=10):
     # step3a: if location is a bomb, show game over message
     # step3b: if location is not a bomb, dig recursively until each square is at least next to a bomb
     # step4: repeat steps 2 and 3a/b until there are no more places to dig -> Victory
-    pass  
+    safe = True
+    while len(board.dug) < board.dim_size ** 2 - num_bombs:
+        print(board)
+        # 0,0 or 0, 0 or 0, 0
+        user_input = re.split(',(\\s)*', input("Where would you like to dig? input as row, col: ")) # '0, 3'
+        row, col = int(user_input[0]), int(user_input[-1])
+        if row < 0 or row >= board.dim_size or col < 0 or col >= dim_size:
+            print("Invalid location, try again")
+            continue
+        
+        # if it's valid, we dig
+        
+        safe = board.dig(row, col)
+        if not safe:
+            # dug a bomb
+            break # (game over)
+        
+        
+    # 2 ways to end loop, lets check which one
+    if safe:
+        print("Parabéns")
+    else:
+        print("Você perdeu")
+          
