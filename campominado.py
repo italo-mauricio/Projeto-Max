@@ -54,7 +54,7 @@ class board:
             
         return board 
 
-    def assign_valuews_to_board():
+    def assign_valuews_to_board(self):
         # now that we have the bombs planted, let's assign a number 0-8 for all the empty spaces, which
         # represents how many neighboring bombs there are. We can precompute these and it'll save us some
         # effort checking what's around the board later on. 
@@ -66,7 +66,25 @@ class board:
                 self.board[r][c] = self.get_num_neighboring_bombs(r, c)
                 
                 
-    def get_num_neighboring_bombs():
+    def get_num_neighboring_bombs(self, row, col):
+        # let's iterate through each of the neighboring positions and sum number of bombs
+        # top left: (row-1, col-1)
+        # top middle: (row=1, col)
+        # top right: (row-1, col+1)
+        # left: (row, col-1)
+        # right: (row, col+!)
+        # bottom left: (row+1, col-1)
+        # bottom middle: (row+1, col)
+        # bottom right: (row+1, col+1)
+        
+        # make sure to not go out of bounds!
+        
+        num_neighboring_bombs = 0
+        for r in range(row-1, (row+1)+1):
+            for c in range(col-1, (col+1)+1):
+                if r == row and c == col:
+                    
+                
         
 
 
