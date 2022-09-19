@@ -12,8 +12,9 @@ class board:
         
         # let's create the board
         # helper function!
-        
+
         self.board = self.make_new_board() # plant the bombs
+        self.assign_vlaues_to_board()
         
         
         
@@ -46,8 +47,27 @@ class board:
             
             if board[row][col] == '*':
                 # this means we've actually planted a bomb there alredy so keep going
+                continue
+            
+            board[row][col] = '*' # plant the bomb
+            bombs_planted += 1
+            
+        return board 
 
- 
+    def assign_valuews_to_board():
+        # now that we have the bombs planted, let's assign a number 0-8 for all the empty spaces, which
+        # represents how many neighboring bombs there are. We can precompute these and it'll save us some
+        # effort checking what's around the board later on. 
+        
+        for r in range(self.dim_size):
+            for c in range(self.dim_size):
+                if self.board[r][c] == '*':
+                    continue
+                self.board[r][c] = self.get_num_neighboring_bombs(r, c)
+                
+                
+    def get_num_neighboring_bombs():
+        
 
 
 
@@ -59,4 +79,4 @@ def play(dim_size=10, num_bombs=10):
     # step3a: if location is a bomb, show game over message
     # step3b: if location is not a bomb, dig recursively until each square is at least next to a bomb
     # step4: repeat steps 2 and 3a/b until there are no more places to dig -> Victory
-    pass 
+    pass  
