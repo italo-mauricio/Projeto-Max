@@ -1,3 +1,5 @@
+import random
+
 # lets create a board object to represent the minesweeper game
 # this is so that we can just say "create a new object", or
 # "dig here", or "render this game for this object"
@@ -35,7 +37,16 @@ class board:
         #  [None, None, ..., None]
         # we can see how this represents a board!
         
-                
+        # plant the bombs
+        bomb_planted = 0
+        while bomb_planted < self.num_bombs:
+            loc = random.randint(0, self.dim_size**2 -1) # return random integer N such that a <= N <= b
+            row = loc // self.dim_size  # we want the number of times dim_size goes into loc to tell 
+            col = loc % self.dim_size  # we want the remainder to tell us what index in that row to loo
+            
+            if board[row][col] == '*':
+                # this means we've actually planted a bomb there alredy so keep going
+
  
 
 
