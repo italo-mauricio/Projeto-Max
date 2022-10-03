@@ -2,7 +2,7 @@ from validacoes import *
 import os
 from time import sleep
 from agenda import *
-import baixavideo.py
+from baixavideo import download
 
 
 diary2 = diary
@@ -42,6 +42,9 @@ def utili():
                 elif user == '3':
                     binconversor()
                 elif user == '4':
+                    download()
+                elif user == '0':
+                    print("Okay!")
                     break
                 else:
                     print("Option invalid!")

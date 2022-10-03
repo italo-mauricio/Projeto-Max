@@ -4,24 +4,31 @@ import re
 import os
 
 def download():
+    os.system("cls")
     print('''
-    |==================================================================|
-    |                   Welcome to MP3 Converter!    
+    |================================================================== |
+    |                   Welcome to MP3 Converter!                       |
+    |                                                                   |
+    | ----------------------------------------------------------------- |
+    | Step 1: The converter requires a youtube link with the video you  |
+    | just want to extract the audio                                    |
+    |                                                                   |
+    | Step 2: Then choose the directory to deposit the file             |
+    |                                                                   |
+    | ================================================================= |
           
-          
-          
-          
-          ''')
-    link = input("Digite o link do vídeo que você quer baixar: ")
-    path = input("Digite o diretório que deseja salvar o vídeo: ")
+    ''')
+    
+    link = input("Enter the link of the video you want to extract the audio: ")
+    path = input("Choose directory: ")
     yt = YouTube(link)
 
-    print("Baixando...")
+    print("Downloading...")
     ys = yt.streams.filter(only_audio=True).first().download(path)
-    print("Download completo!")
+    print("Download Successfully!")
 
-    print("Convertendo arquivo..")
-    print("Aguarde")
+    print("Converting file..")
+    print("Wait...")
 
     for file in os.listdir(path):
         if re.search('mp4', file):
@@ -31,4 +38,4 @@ def download():
             new_file.write_audiofile(mp3_path)
             os.remove(mp4_path)
             
-    print("Concluido")
+    print("Complete!")
